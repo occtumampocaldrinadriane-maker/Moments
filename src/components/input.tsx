@@ -6,9 +6,16 @@ interface InputProps extends TextInputProps {
 
 export default function Input({ label, ...props }: InputProps) {
     return (
-        <View>
-            <Text>{label}</Text>
-            <TextInput className='h-12 border border-gray-500 px-4' {...props} />
+        <View className="gap-2">
+            <Text className="text-sm font-semibold text-gray-700">
+                {label}
+            </Text>
+
+            <TextInput
+                className="h-14 rounded-xl border border-gray-300 bg-gray-50 px-4 text-base text-gray-900"
+                placeholderTextColor="#9CA3AF"
+                {...props}
+            />
         </View>
     )
 }
